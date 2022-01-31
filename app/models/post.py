@@ -23,7 +23,7 @@ class Post(object):
         }
 
     def save_to_mongo(self):
-        Database.insert(collection='posts', data=self.json())
+        Database.insert_to_db(collection='posts', data=self.json())
 
     @staticmethod
     def from_mongo(id):
